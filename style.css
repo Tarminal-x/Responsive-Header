@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*---------- Header section start ----------*/
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 60px;
+    background-color: gold;
+}
+
+/*---------- Logo part start ----------*/
+.logo h1{
+    font-size: 39px;
+    cursor: pointer;
+}
+/*---------- Logo part close ----------*/
+
+
+/*---------- nav part start ----------*/
+.nav a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bolder;
+    margin: 0 30px;
+    position: relative; 
+}
+
+.nav a::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: -7px;
+    background-color: #fff;
+    border-radius: 30px;
+   
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.nav a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+/*---------- nav part close ----------*/
+
+
+/*---------- nav-btn part start ----------*/
+.nav-btn{
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 5px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid #eee;
+    border-radius: 6px;
+    transition: all .5s;
+}
+
+.nav-btn:hover{
+    background-color: #0093E9;
+}
+/*---------- nav-btn part close ----------*/
+
+
+/*---------- Header section close ----------*/
+
+
+
+
+
+
+
+
+
+/*---------- Responsive section start ----------*/
+
+
+/*---------- Media screen 600px start ----------*/
+@media (max-width: 600px){
+    header{
+        display: block;
+        padding: 0 0 10px 0;
+        background-color: lightgreen;
+    }
+
+    .logo h1{
+        width: 100%;
+        padding: 20px 0;
+        text-align: center;
+        background-color: #0093E9;
+        color: #fff;
+    }
+
+    .nav a{
+        display: block;
+        width: 70px;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .nav-btn{
+        display: block;
+        margin: 10px auto;
+    }
+}
+/*---------- Media screen 600px start ----------*/
+
+
+/*---------- Responsive section close ----------*/
